@@ -23,10 +23,10 @@ public class StateCensusAnalyser {
             }
         } catch (RuntimeException exception) {
             throw new CensusAnalyserException(CensusAnalyserException.exceptionType.WRONG_FILE,
-                    "might be some error related to delimiter");
+                    "delimiter or header is improper");
         } catch (NoSuchFileException exception) {
             throw new CensusAnalyserException(CensusAnalyserException.exceptionType.FILE_NOT_FOUND,
-                    "no such file exists. ");
+                    "file is not found");
         } catch (IOException exception) {
             exception.printStackTrace();
         }
